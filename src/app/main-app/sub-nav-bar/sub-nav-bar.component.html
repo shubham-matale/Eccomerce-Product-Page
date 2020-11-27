@@ -1,0 +1,8 @@
+<div class="d-flex justify-content-center  align-items-center py-3 header-below-text-bg" >
+    <div class="header-below-text px-4">Invite friends to Big Fashion Festival & get up to $150 MynCash for every person who visits</div>
+</div>
+<nav aria-label="breadcrumb ">
+    <ol class="breadcrumb bg-white ">
+      <li class="breadcrumb-item breadcrum-text" *ngFor="let item of breadCrumItems" aria-current="page" [ngClass]="breadCrumItems[breadCrumItems.length-1]==item?'breadcrum-text-active':''">{{item | titlecase}}</li>
+    </ol>
+  </nav>

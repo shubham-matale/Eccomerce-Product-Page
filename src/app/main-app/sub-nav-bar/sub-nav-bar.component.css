@@ -1,0 +1,28 @@
+.header-below-text{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.header-below-text-bg{
+    background: linear-gradient(90deg, rgba(24,23,22,1) 0%, rgba(237,78,8,1) 100%);
+}
+
+.breadcrum-text{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: capitalize;
+    color: #000000;
+}
+
+.breadcrum-text-active{
+    font-weight: 500;
+}
