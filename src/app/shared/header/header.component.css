@@ -19,6 +19,13 @@
     color: #000000;
 }
 
+.badge-cart{
+    padding : 0.6em .9em !important;
+    border-radius: 0.5rem !important;
+    background-color: #E64C09;
+    ;
+}
+
 @media only screen and (max-width: 996px) {
     .show-menu {
       display: none !important;

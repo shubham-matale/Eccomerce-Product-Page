@@ -1,0 +1,33 @@
+<div class="row px-3">
+    <div class="col-12">
+        <h1 class="title">All Products <span class="title-sub-text">(25 products)</span></h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+        <ul class="d-flex flex-wrap align-items-center pl-0 ml-2">
+            <li class="filter-text list-group-item" style="padding-left: 0.5rem !important; padding-right: 0.5rem !important;">Filters : </li>
+            <li class="list-group-item ">Demo</li>
+            <li class="list-group-item ">Demo</li>
+            <li class="list-group-item ">Demo</li>
+            <li class="list-group-item ">Demo</li>
+            <li class="list-group-item ">Demo</li>
+            <li class="list-group-item ">Demo</li>
+            <li class="list-group-item ">Demo</li>
+          </ul>
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+        <div class="round-radius py-2 px-4 my-3 my-md-2" >
+            <div class="btn-group" dropdown #dropdown="bs-dropdown" [autoClose]="false">
+                <span dropdownToggle  class="text-style">
+                Sort By : <span class="caret"></span>
+                </span>
+                <ul id="dropdown-triggers-manual" *dropdownMenu class="dropdown-menu"
+                    role="menu" aria-labelledby="button-triggers-manual">
+                    <li role="menuitem"><a class="dropdown-item" (click)="sortBy(item);dropdown.toggle(true)" *ngFor="let item of sortOptions">{{item['value']}}</a></li>
+                </ul>
+            </div>
+            <span class="text-style ml-1 fs-500"  (click)="dropdown.toggle(true)">{{selectedSortOption['value']}} <span  class="fa fa-angle-down"></span></span>
+        </div>
+    </div>
+</div>

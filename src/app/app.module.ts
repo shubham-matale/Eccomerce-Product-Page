@@ -18,7 +18,8 @@ import { MainAppModule } from './main-app/main-app.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    MainAppModule
+    MainAppModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

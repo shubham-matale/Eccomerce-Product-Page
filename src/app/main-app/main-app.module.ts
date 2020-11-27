@@ -5,13 +5,15 @@ import { MainAppRoutingModule } from './main-app-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { SubNavBarComponent } from './sub-nav-bar/sub-nav-bar.component'
 import { MainAppComponent } from './main-app.component';
-
+import { ProductListingComponent } from './product-listing/product-listing.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 @NgModule({
-  declarations: [MainAppComponent,SubNavBarComponent],
+  declarations: [MainAppComponent,SubNavBarComponent, ProductListingComponent],
   imports: [
     CommonModule,
     MainAppRoutingModule,
-    SharedModule
+    SharedModule,
+    BsDropdownModule.forRoot()
   ],
   exports:[MainAppComponent]
 })
