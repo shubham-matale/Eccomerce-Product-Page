@@ -19,6 +19,7 @@ import { MainAppModule } from './main-app/main-app.module';
     BrowserAnimationsModule,
     SharedModule,
     MainAppModule,
+  
     
   ],
   providers: [],

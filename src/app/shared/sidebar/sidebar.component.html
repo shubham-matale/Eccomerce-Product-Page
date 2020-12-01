@@ -1,73 +1,34 @@
-<!-- <div class="wrapper">
-    
-    
 
-    
-    <div id="content">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
+<nav id="sidebar" [ngClass]="openNav?'sidebar-active':''">
 
-                <button type="button" id="sidebarCollapse" class="btn btn-info">
-                    <i class="fas fa-align-left"></i>
-                    <span>Toggle Sidebar</span>
-                </button>
-            </div>
-        </nav>
+    <div id="dismiss" (click)="openNav=false">
+      <i class="fa fa-arrow-left"></i>
     </div>
-    <div class="overlay"></div>
-</div> -->
-
-<nav id="sidebar">
-
-    <div id="dismiss">
-        <i class="fas fa-arrow-left"></i>
-    </div>
-
+  
     <div class="sidebar-header">
-        <h3>Bootstrap Sidebar</h3>
+      <h3>Welcome</h3>
     </div>
-
-    <ul class="list-unstyled components">
-        <p>Dummy Heading</p>
-        <li class="active">
-            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
-            <ul class="collapse list-unstyled" id="homeSubmenu">
-                <li>
-                    <a href="#">Home 1</a>
-                </li>
-                <li>
-                    <a href="#">Home 2</a>
-                </li>
-                <li>
-                    <a href="#">Home 3</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="#">About</a>
-            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
-            <ul class="collapse list-unstyled" id="pageSubmenu">
-                <li>
-                    <a href="#">Page 1</a>
-                </li>
-                <li>
-                    <a href="#">Page 2</a>
-                </li>
-                <li>
-                    <a href="#">Page 3</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="#">Portfolio</a>
-        </li>
-        <li>
-            <a href="#">Contact</a>
-        </li>
+  
+    <ul class="list-unstyled components ml-2">
+      <p>Menu</p>
+      <li class="active">
+        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Shop</a>
+  
+      </li>
+      <li>
+        <a href="#">Features</a>
+      </li>
+      <li>
+        <a href="#">Pricing</a>
+      </li>
+      <li>
+        <a href="#">Disabled</a>
+      </li>
     </ul>
-</nav>
-
-<button class="show-large btn" id="toogleBtn">
+  </nav>
+  
+  <button class="show-large btn" id="toogleBtn" (click)="openNav=true">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
-</button>
+  </button>
+  

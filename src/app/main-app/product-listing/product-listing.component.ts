@@ -26,162 +26,7 @@ export class ProductListingComponent implements OnInit {
       value:'Ratings' 
     }
 ]
-originalProductList1=[{
-  "id": 1,
-  "vendor": "Gap",
-  "name": "Men's Pullover Sweatshirt",
-  "image_src": ["https://cdn.shopify.com/s/files/1/0455/2176/4502/files/Sweater_0.jpg?v=1603266982"],
-  "price": "74",
-  "tag": "T-shirt",
-  "compare_at_price": "200",
-  "options": [
-      {
-          "id": "1010",
-          "name": "Size",
-          "value": "US 8"
-      }, {
-          "id": "1011",
-          "name": "Size",
-          "value": "US 9"
-      }, {
-          "id": "1012",
-          "name": "Size",
-          "value": "US 10"
-      }, {
-          "id": "1013",
-          "name": "Size",
-          "value": "US 11"
-      }, {
-          "id": "1014",
-          "name": "Size",
-          "value": "US 13"
-      }
-  ]
-},{
-  "id": 1,
-  "vendor": "Gap",
-  "name": "Men's Pullover Sweatshirt",
-  "image_src": ["https://cdn.shopify.com/s/files/1/0455/2176/4502/files/Sweater_0.jpg?v=1603266982"],
-  "price": "74",
-  "tag": "T-shirt",
-  "compare_at_price": "200",
-  "options": [
-      {
-          "id": "1010",
-          "name": "Size",
-          "value": "US 8"
-      }, {
-          "id": "1011",
-          "name": "Size",
-          "value": "US 9"
-      }, {
-          "id": "1012",
-          "name": "Size",
-          "value": "US 10"
-      }, {
-          "id": "1013",
-          "name": "Size",
-          "value": "US 11"
-      }, {
-          "id": "1014",
-          "name": "Size",
-          "value": "US 13"
-      }
-  ]
-},{
-  "id": 1,
-  "vendor": "Gap",
-  "name": "Men's Pullover Sweatshirt",
-  "image_src": ["https://cdn.shopify.com/s/files/1/0455/2176/4502/files/Sweater_0.jpg?v=1603266982"],
-  "price": "74",
-  "tag": "T-shirt",
-  "compare_at_price": "200",
-  "options": [
-      {
-          "id": "1010",
-          "name": "Size",
-          "value": "US 8"
-      }, {
-          "id": "1011",
-          "name": "Size",
-          "value": "US 9"
-      }, {
-          "id": "1012",
-          "name": "Size",
-          "value": "US 10"
-      }, {
-          "id": "1013",
-          "name": "Size",
-          "value": "US 11"
-      }, {
-          "id": "1014",
-          "name": "Size",
-          "value": "US 13"
-      }
-  ]
-},{
-  "id": 1,
-  "vendor": "Gap",
-  "name": "Men's Pullover Sweatshirt",
-  "image_src": ["https://cdn.shopify.com/s/files/1/0455/2176/4502/files/Sweater_0.jpg?v=1603266982"],
-  "price": "74",
-  "tag": "T-shirt",
-  "compare_at_price": "200",
-  "options": [
-      {
-          "id": "1010",
-          "name": "Size",
-          "value": "US 8"
-      }, {
-          "id": "1011",
-          "name": "Size",
-          "value": "US 9"
-      }, {
-          "id": "1012",
-          "name": "Size",
-          "value": "US 10"
-      }, {
-          "id": "1013",
-          "name": "Size",
-          "value": "US 11"
-      }, {
-          "id": "1014",
-          "name": "Size",
-          "value": "US 13"
-      }
-  ]
-},{
-  "id": 1,
-  "vendor": "Gap",
-  "name": "Men's Pullover Sweatshirt",
-  "image_src": ["https://cdn.shopify.com/s/files/1/0455/2176/4502/files/Sweater_0.jpg?v=1603266982"],
-  "price": "74",
-  "tag": "T-shirt",
-  "compare_at_price": "200",
-  "options": [
-      {
-          "id": "1010",
-          "name": "Size",
-          "value": "US 8"
-      }, {
-          "id": "1011",
-          "name": "Size",
-          "value": "US 9"
-      }, {
-          "id": "1012",
-          "name": "Size",
-          "value": "US 10"
-      }, {
-          "id": "1013",
-          "name": "Size",
-          "value": "US 11"
-      }, {
-          "id": "1014",
-          "name": "Size",
-          "value": "US 13"
-      }
-  ]
-}]
+
   originalProductList=[
     {
         "id": 1,
@@ -1079,6 +924,70 @@ originalProductList1=[{
             }
         ]
     },
+    {
+        "id": 1,
+        "vendor": "Gap",
+        "name": "Men's Pullover Sweatshirt",
+        "image_src": ["https://cdn.shopify.com/s/files/1/0455/2176/4502/files/Sweater_0.jpg?v=1603266982"],
+        "price": "74",
+        "tag": "T-shirt",
+        "compare_at_price": "200",
+        "options": [
+            {
+                "id": "1010",
+                "name": "Size",
+                "value": "US 8"
+            }, {
+                "id": "1011",
+                "name": "Size",
+                "value": "US 9"
+            }, {
+                "id": "1012",
+                "name": "Size",
+                "value": "US 10"
+            }, {
+                "id": "1013",
+                "name": "Size",
+                "value": "US 11"
+            }, {
+                "id": "1014",
+                "name": "Size",
+                "value": "US 13"
+            }
+        ]
+    },
+ {
+        "id": 2,
+        "vendor": "Puma",
+        "name": "Solid Polo Collar Grey T-shirt",
+        "image_src": ["https://cdn.shopify.com/s/files/1/0455/2176/4502/files/Denim_0.jpg?v=1603267107"],
+        "price": "74",
+        "compare_at_price": "200",
+        "tag": "Denim",
+        "options": [
+            {
+                "id": "1020",
+                "name": "Size",
+                "value": "xs"
+            }, {
+                "id": "1021",
+                "name": "Size",
+                "value": "small"
+            }, {
+                "id": "1022",
+                "name": "Size",
+                "value": "medium"
+            }, {
+                "id": "1023",
+                "name": "Size",
+                "value": "large"
+            }, {
+                "id": "1024",
+                "name": "Size",
+                "value": "xl"
+            }
+        ]
+    }
  ]
  currentProductHoverIndex=-1;
  selectedProductVariable = null;

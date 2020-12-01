@@ -184,3 +184,9 @@
 /* .product-img:hover + .size{
     display: block;
 } */
+
+@media (max-width:575px) {
+    .row-5 {
+       display: block;
+    }
+ }
