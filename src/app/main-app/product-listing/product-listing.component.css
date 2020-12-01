@@ -58,11 +58,129 @@
 
 }
 
-.list-group-item{
+.list-group-item-filter{
     padding: 0.5rem 1.5rem !important;
     background-color: none !important;
-    border: 1px solid #000000;
+    border: 1px solid #878787;
+    color: #878787;
     box-sizing: border-box;
     border-radius: 32px;
     margin: 5px;
 }
+
+
+.product-img{
+    width: 263px;
+}
+
+.brand-name{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: capitalize;
+    color: #000000;
+}
+
+.product-name{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: capitalize;
+    color: #878787;
+}
+
+.selling-price{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: capitalize;
+    color: #000000;
+}
+
+.actual-price{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    text-decoration-line: line-through;
+    text-transform: capitalize;
+}
+
+.discount{
+    color: orange;
+    font-size: 12px;
+}
+
+.select-size-text{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: capitalize;
+    color: #000000;
+}
+
+.list-group-item-size-btn{
+    padding: 0.5rem 1.5rem !important;
+    background-color: none !important;
+    box-sizing: border-box;
+    border: none;
+    padding: 0 !important;
+    margin: 0 2.5px!important;
+}
+
+.size-btn{
+    border-radius: 50%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: capitalize;
+    width: 37px;
+    height: 37px;
+    color: #000000;
+}
+.size-btn:hover{
+    color: white;
+}
+
+.size{
+    display: none;
+    position: absolute;
+    top: 320px;
+    opacity: 1;
+}
+
+.product-info:hover {
+    display: none;
+    opacity: 0;
+    z-index: -1;
+    /* transition: opacity 1s; */
+    
+}
+
+.active-filter{
+    border: 1px solid #000000 !important;
+    color: #000000 !important;
+}
+
+/* .product-info:hover{
+    display: none;
+}
+
+/* .product-img:hover + .product-info{
+    display: none;
+} */
+
+/* .product-img:hover + .size{
+    display: block;
+} */

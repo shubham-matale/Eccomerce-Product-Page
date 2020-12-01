@@ -7,13 +7,16 @@ import { SubNavBarComponent } from './sub-nav-bar/sub-nav-bar.component'
 import { MainAppComponent } from './main-app.component';
 import { ProductListingComponent } from './product-listing/product-listing.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { AlertModule } from 'ngx-bootstrap/alert';
+
 @NgModule({
   declarations: [MainAppComponent,SubNavBarComponent, ProductListingComponent],
   imports: [
     CommonModule,
     MainAppRoutingModule,
     SharedModule,
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
+    AlertModule.forRoot()
   ],
   exports:[MainAppComponent]
 })

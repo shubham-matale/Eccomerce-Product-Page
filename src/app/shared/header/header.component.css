@@ -20,7 +20,8 @@
 }
 
 .badge-cart{
-    padding : 0.6em .9em !important;
+    font-weight: 100;
+    font-size: 12px;
     border-radius: 0.5rem !important;
     background-color: #E64C09;
     ;

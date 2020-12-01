@@ -1,33 +1,61 @@
-<div class="row px-3">
-    <div class="col-12">
-        <h1 class="title">All Products <span class="title-sub-text">(25 products)</span></h1>
+<div class="container-fluid">
+    <div class="row ">
+        <div class="col-12">
+            <h1 class="title">All Products <span class="title-sub-text">(25 products)</span></h1>
+        </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-        <ul class="d-flex flex-wrap align-items-center pl-0 ml-2">
-            <li class="filter-text list-group-item" style="padding-left: 0.5rem !important; padding-right: 0.5rem !important;">Filters : </li>
-            <li class="list-group-item ">Demo</li>
-            <li class="list-group-item ">Demo</li>
-            <li class="list-group-item ">Demo</li>
-            <li class="list-group-item ">Demo</li>
-            <li class="list-group-item ">Demo</li>
-            <li class="list-group-item ">Demo</li>
-            <li class="list-group-item ">Demo</li>
-          </ul>
-    </div>
-    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-        <div class="round-radius py-2 px-4 my-3 my-md-2" >
-            <div class="btn-group" dropdown #dropdown="bs-dropdown" [autoClose]="false">
-                <span dropdownToggle  class="text-style">
-                Sort By : <span class="caret"></span>
-                </span>
-                <ul id="dropdown-triggers-manual" *dropdownMenu class="dropdown-menu"
-                    role="menu" aria-labelledby="button-triggers-manual">
-                    <li role="menuitem"><a class="dropdown-item" (click)="sortBy(item);dropdown.toggle(true)" *ngFor="let item of sortOptions">{{item['value']}}</a></li>
-                </ul>
+    <div class="row">
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 px-0">
+            <ul class="d-flex flex-wrap align-items-center pl-0 ml-2">
+                <li class="filter-text list-group-item" style="padding-left: 0.5rem !important; padding-right: 0.5rem !important;">Filters : </li>
+                <li class="list-group-item list-group-item-filter" (click)="onFilterClick('all')" [ngClass]="activeFilter=='all'?'active-filter':''"><a class="text-decoration-none" style="color: inherit;" href="#">All</a></li>
+                <li class="list-group-item list-group-item-filter"  [ngClass]="activeFilter==filterTag?'active-filter':''" (click)="onFilterClick(filterTag)"  *ngFor="let filterTag of filterOptions"><a class="text-decoration-none" style="color: inherit;" href="#">{{filterTag | titlecase}}</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+            <div class="round-radius py-2 px-4 my-3 my-md-2" >
+                <div class="btn-group" dropdown #dropdown="bs-dropdown" [autoClose]="false">
+                    <span dropdownToggle  class="text-style">
+                    Sort By : <span class="caret"></span>
+                    </span>
+                    <ul id="dropdown-triggers-manual" *dropdownMenu class="dropdown-menu"
+                        role="menu" aria-labelledby="button-triggers-manual">
+                        <li role="menuitem"><a class="dropdown-item" (click)="sortBy(item);dropdown.toggle(true)" *ngFor="let item of sortOptions">{{item['value']}}</a></li>
+                    </ul>
+                </div>
+                <span class="text-style ml-1 fs-500"  (click)="dropdown.toggle(true)">{{selectedSortOption['value']}} <span  class="fa fa-angle-down"></span></span>
             </div>
-            <span class="text-style ml-1 fs-500"  (click)="dropdown.toggle(true)">{{selectedSortOption['value']}} <span  class="fa fa-angle-down"></span></span>
+        </div>
+    </div>
+    <hr class="my-0 mx-3"> 
+    <div class="d-flex flex-wrap">
+        <div class="col-md-2 mx-3 my-3"  *ngFor="let item of productToShow " (mouseover)="onMouseOver(item['id'],item)" (mouseout)="onMouseOut(item['id'],item)">
+            <div class="text-center mb-2"  >
+                <img class="product-img" style="max-width: 264px;"  src="{{item['image_src'][0]}}" alt="product photo" />
+                
+            </div>
+            <div class=" w-100 product-info" style="width: 264px !important;" [ngClass]="currentProductHoverIndex==item['id']?'d-none':''">
+                <div >
+                    <span class="brand-name ml-3">{{item['vendor']}}</span><br>
+                    <span class="product-name d-inline-block text-truncate mw-100 ml-3">{{item['name']}}</span><br>
+                    <span class="selling-price ml-3">${{item['price']}}</span> <span class="actual-price ml-2">12</span><span class="discount"> (50% OFF)</span>
+                </div>
+            </div>
+            <div class="w-100 bg-white size" style="width: 264px !important;" [ngClass]="currentProductHoverIndex==item['id']?'d-block':''" >
+                <div class="w-100  bg-white" [ngClass]="!item['step2']?'d-block':'d-none'">
+                    <span class="select-size-text mb-2 ml-3">Select Size</span>
+                    <ul class="d-flex flex-wrap align-items-center pt-2 ml-3" style="padding-left: 0 !important;">
+                        <li class="list-group-item list-group-item-size-btn" *ngFor="let variable of item['options'];let i=index"><button class="btn btn-outline-dark btn-sm size-btn" (click)="productSelected(item,i)">{{variable['displayName']| uppercase}}</button></li>
+                    </ul>
+                    <span class="selling-price ml-3">${{item['price']}}</span> <span class="actual-price ml-2">12</span><span class="discount"> (50% OFF)</span>
+                </div>
+                <div class="w-100  bg-white my-3" [ngClass]="item['step2']?'d-block':'d-none'">
+                    <button class="btn btn-outline-dark w-100 px-2 py-1 mb-2" (click)="addToCart(item)">Add To Cart</button>
+                    <span class="product-name d-inline-block text-truncate mw-100 ml-3">Sizes : {{item['sizestring']| uppercase}}</span><br>
+                    <span class="selling-price ml-3">${{item['price']}}</span> <span class="actual-price ml-2">12</span><span class="discount"> (50% OFF)</span>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+  
